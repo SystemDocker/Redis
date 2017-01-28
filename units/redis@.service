@@ -1,0 +1,9 @@
+[Unit]
+Description=Redis: %I
+
+[Service]
+# SystemDocker configuration
+Environment='DOCKER_IMAGE=sameersbn/redis'
+
+# Setup the volume
+Environment='DOCKER_VOLUME_VAR_LIB_REDIS=/srv/docker/redis/instance/%i/data:/var/lib/redis'
